@@ -19,7 +19,7 @@ const Login = () => {
         return <Navigate to='/'></Navigate>
     }
     const onSubmit = (data) => {
-        console.log(data)
+        // console.log(data)
         logIn(data.email, data.password)
             .then(() => {
                 Swal.fire({

@@ -16,16 +16,20 @@ admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
 });
 
-app.use(
-    cors({
-        origin: "http://localhost:5173",
-        credentials: true,
-    })
-);
+app.use(cors({
+    origin: [
+        "https://appify-c59b9.web.app",
+        "https://fascinating-cheesecake-194c8e.netlify.app",
+        "http://localhost:5173"
+    ],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 app.use(express.json());
 
 // ----- MongoDB Connection -----
-const uri = "mongodb+srv://appifyuser:JdkvRaSUCegnIZ8Z@cluster0.adidkqb.mongodb.net/?appName=Cluster0";
+const uri = process.env.MONGO_uri;
 const client = new MongoClient(uri);
 let db, usersCol, postsCol;
 
@@ -33,7 +37,7 @@ async function connectDB() {
     db = client.db("socialmedia");
     usersCol = db.collection("users");
     postsCol = db.collection("posts");
-    console.log("Connected to MongoDB");
+    // console.log("Connected to MongoDB");
 }
 connectDB();
 

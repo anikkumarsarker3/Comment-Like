@@ -22,7 +22,7 @@ const Register = () => {
     }
 
     const onSubmit = (data) => {
-        console.log(data)
+        // console.log(data)
         const name = data.firstName + ' ' + data.lastName;
         createuser(data.email, data.password)
             .then(() => {
