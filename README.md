@@ -1,3 +1,7 @@
+### Server site=> https://appify-server.vercel.app
+### Client site=>https://fascinating-cheesecake-194c8e.netlify.app
+
+
 ## 📦 Full-Stack Social Like-comment Application
 
 A complete authentication-based social feed application built with:
