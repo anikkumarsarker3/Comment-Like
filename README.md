@@ -1,16 +1,18 @@
-📦 Full-Stack Social Feed Application
+## 📦 Full-Stack Social Like-comment Application
 
 A complete authentication-based social feed application built with:
+```
 React.js (Vite)
 TailwindCSS
 Firebase Auth (Client)
 Express.js
 MongoDB
 Firebase Admin (Server)
-
+```
 This project converts the provided Login, Register, and Feed HTML pages into a fully functioning web app with secure authentication, post creation, comments, replies, likes, and private/public visibility settings.
 
-🚀 Features
+### 🚀 Features
+```
 🔐 Authentication
 
 Firebase Authentication (Email/Password)
@@ -37,11 +39,12 @@ Shows who liked what
 MongoDB for data storage
 Firebase Admin SDK for token verification
 Express API for posts, comments, likes, replies, etc.
+```
 
-
-🛠 Client Installation (React + Vite)
+## 🛠 Client Installation (React + Vite)
+```bash
 1️⃣ Navigate to client folder
-cd client
+cd comment-comment-client
 
 2️⃣ Install dependencies
 npm install
@@ -59,10 +62,14 @@ VITE_appId=your_id
 
 4️⃣ Run client
 npm run dev
+```
 
-🛠 Server Installation (Express + MongoDB)
+## 🛠 Server Installation (Express + MongoDB)
+
+
+```bash
 1️⃣ Navigate to server folder
-cd server
+cd comment-comment-server
 
 2️⃣ Install dependencies
 npm install
@@ -78,9 +85,11 @@ Place YourAccountKey.json in /server folder.
 
 5️⃣ Start server
 node index.js
+```
 
-🌐 CORS Configuration
+### 🌐 CORS Configuration
 
+```
 Server allows client URL:
 
 app.use(cors({
@@ -91,3 +100,4 @@ app.use(cors({
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
